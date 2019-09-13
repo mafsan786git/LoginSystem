@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>Login-Page</title>
+    <style>
+        @media screen and (min-width:600px) {
+            .container {
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" style="border: solid black; padding-top: 25px; margin-top: 25px">
+        <div class="container-fliud d-flex justify-content-center">
+            <h1><strong>Login</strong></h1>
+        </div>
+        <hr>
+        <% include ./partials/messages %>
+        <form action="/app/login" method="POST">
+            <div class="form-group">
+                <label><strong>Email</strong></label>
+                <input type="email" class="form-control" id="fname" name="email" placeholder="enter your email name" required>
+            </div>
+            <div class="form-group">
+                <label for="password"><strong>Password</strong></label>
+                <input type="password" id="password" class="form-control" name="password" placeholder="enter your password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="login" class="btn btn-primary" style="width: 100%">Login</button>
+            </div>
+            <div class="form-group">
+                <h5>Don't have account ? <a href="/app/register">Sign Up</a></h5>
+            </div>
+        </form>
+
+    </div>
+</body>
+
+</html>

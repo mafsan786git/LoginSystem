@@ -8,8 +8,7 @@ module.exports = function (passport) {
     passport.use(
         new localStrategy(
             {usernameField:'email',
-            passwordField:'password',
-            passReqToCallback:true
+            passwordField:'password'
             },
             (email, password, done)=>{
                 var sql = 'SELECT * FROM user WHERE email = ?';
